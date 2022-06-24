@@ -101,6 +101,22 @@ export class MapComponent implements OnInit {
         // title: ,
         draggable: false
       },
+      {
+        coordinate: {
+          lat: 17.493074,
+          lng: 78.407959,
+        },
+        // title: ,
+        draggable: false
+      },
+      {
+        coordinate: {
+          lat: 17.4469182,
+          lng: 78.3284508,
+        },
+        // title: ,
+        draggable: false
+      },
     ]);
   }
 
