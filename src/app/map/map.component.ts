@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 
@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
 })
+
+
+
 export class MapComponent implements OnInit {
   @ViewChild('map') mapRef: ElementRef<HTMLElement>;
   newMap: GoogleMap;
@@ -29,7 +32,7 @@ export class MapComponent implements OnInit {
   async createMap() {
     try {
       this.newMap = await GoogleMap.create({
-        id: 'capacitor-google-maps',
+        id: 'p',
         element: this.mapRef.nativeElement,
         apiKey: environment.google_maps_api_key,
         config: {
