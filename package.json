@@ -37,7 +37,8 @@
     "pod-install": "^0.1.37",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "inquirer": "^8.1.0"
   },
   "devDependencies": {
     "@angular-eslint/builder": "~13.0.1",
