@@ -4,4 +4,5 @@
     <string name="title_activity_main">ionic-firebase-authentication</string>
     <string name="package_name">Evento.app</string>
     <string name="custom_url_scheme">Evento.app</string>
+      <string name="google_maps_api_key">AIzaSyDHzT0zn6HeKG2jkI9FREt9a0vFUjr95pg</string>
 </resources>
