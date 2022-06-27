@@ -10,7 +10,8 @@
     "start": "npm run serve",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "test:e2e:build":"npm run build"
   },
   "private": true,
   "dependencies": {
