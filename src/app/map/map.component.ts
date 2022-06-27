@@ -32,7 +32,7 @@ export class MapComponent implements OnInit {
   async createMap() {
     try {
       this.newMap = await GoogleMap.create({
-        id: 'p',
+        id: 'capacitor-google-maps',
         element: this.mapRef.nativeElement,
         apiKey: environment.google_maps_api_key,
         config: {
