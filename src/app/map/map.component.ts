@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 
@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
 })
+
+
+
 export class MapComponent implements OnInit {
   @ViewChild('map') mapRef: ElementRef<HTMLElement>;
   newMap: GoogleMap;
@@ -113,6 +116,14 @@ export class MapComponent implements OnInit {
         coordinate: {
           lat: 17.4469182,
           lng: 78.3284508,
+        },
+        // title: ,
+        draggable: false
+      },
+      {
+        coordinate: {
+          lat: 17.4469184,
+          lng: 78.3284506,
         },
         // title: ,
         draggable: false
