@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 
@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./map.component.scss'],
 })
 
-
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
 
 export class MapComponent implements OnInit {
   @ViewChild('map') mapRef: ElementRef<HTMLElement>;
