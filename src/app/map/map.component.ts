@@ -23,12 +23,19 @@ export class MapComponent implements OnInit {
 
   constructor() {}
 
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
   ngOnInit() {
   }
 
-  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
-  ngAfterViewInit() {
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface, @angular-eslint/contextual-lifecycle
+  // ngAfterViewInit() {
+  //   this.createMap();
+  // }
+
+  ionViewDidEnter(){
+
     this.createMap();
+
   }
 
   async createMap() {
