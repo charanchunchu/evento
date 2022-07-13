@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 
@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./map.component.scss'],
 })
 
-
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
 
 export class MapComponent implements OnInit {
   @ViewChild('map') mapRef: ElementRef<HTMLElement>;
@@ -21,12 +23,19 @@ export class MapComponent implements OnInit {
 
   constructor() {}
 
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
   ngOnInit() {
   }
 
-  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
-  ngAfterViewInit() {
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface, @angular-eslint/contextual-lifecycle
+  // ngAfterViewInit() {
+  //   this.createMap();
+  // }
+
+  ionViewDidEnter(){
+
     this.createMap();
+
   }
 
   async createMap() {
